@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="testTables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://47.94.247.101:3306/xsl_match" userId="root"
+                        password="root">
+        </jdbcConnection>
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+           NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- targetProject:生成PO类的位置 -->
+        <javaModelGenerator targetPackage="com.xsl.pojo"
+                            targetProject="./src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!-- targetProject:mapper.xml映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="xsl.match.mapper"
+                         targetProject="./src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+        <!-- targetPackage：mapper接口生成的位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="xsl.match.mapper"
+                             targetProject="./src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+        <!-- 指定数据库表 -->
+
+        <table schema="" tableName="xsl_invitation"></table>
+        <!--<table schema="" tableName="xsl_collectt"></table>-->
+        <!--<table schema="" tableName="xsl_college"></table>-->
+        <!--<table schema="" tableName="xsl_datetime"></table>-->
+        <!--<table schema="" tableName="xsl_file"></table>-->
+        <!--<table schema="" tableName="xsl_group_rule"></table>-->
+        <!--<table schema="" tableName="xsl_historyh"></table>-->
+        <!--<table schema="" tableName="xsl_hunter"></table>-->
+        <!--<table schema="" tableName="xsl_hunter_level"></table>-->
+        <!--<table schema="" tableName="xsl_hunter_level_experience"></table>-->
+        <!--<table schema="" tableName="xsl_hunter_level_privilege"></table>-->
+        <!--<table schema="" tableName="xsl_hunter_level_rule"></table>-->
+        <!--<table schema="" tableName="xsl_hunter_tag"></table>-->
+        <!--<table schema="" tableName="xsl_hunter_task"></table>-->
+        <!--<table schema="" tableName="xsl_input_bill"></table>-->
+        <!--<table schema="" tableName="xsl_log"></table>-->
+        <!--<table schema="" tableName="xsl_major"></table>-->
+        <!--<table schema="" tableName="xsl_manager"></table>-->
+        <!--<table schema="" tableName="xsl_manager_role"></table>-->
+        <!--<table schema="" tableName="xsl_master"></table>-->
+        <!--<table schema="" tableName="xsl_master_level"></table>-->
+        <!--<table schema="" tableName="xsl_master_level_experience"></table>-->
+        <!--<table schema="" tableName="xsl_master_level_privilege"></table>-->
+        <!--<table schema="" tableName="xsl_master_level_rule"></table>-->
+        <!--<table schema="" tableName="xsl_master_tag"></table>-->
+        <!--<table schema="" tableName="xsl_match"></table>-->
+        <!--<table schema="" tableName="xsl_match_rank"></table>-->
+        <!--<table schema="" tableName="xsl_match_reward"></table>-->
+        <!--<table schema="" tableName="xsl_network"></table>-->
+        <!--<table schema="" tableName="xsl_order"></table>-->
+        <!--<table schema="" tableName="xsl_oriented"></table>-->
+        <!--<table schema="" tableName="xsl_output_bill"></table>-->
+        <!--<table schema="" tableName="xsl_privilege_rule"></table>-->
+        <!--<table schema="" tableName="xsl_reward"></table>-->
+        <!--<table schema="" tableName="xsl_reward_rank"></table>-->
+        <!--<table schema="" tableName="xsl_role"></table>-->
+        <!--<table schema="" tableName="xsl_role_rule"></table>-->
+        <!--<table schema="" tableName="xsl_rule"></table>-->
+        <!--<table schema="" tableName="xsl_school"></table>-->
+        <!--<table schema="" tableName="xsl_schoolInfo"></table>-->
+        <!--<table schema="" tableName="xsl_score"></table>-->
+        <!--<table schema="" tableName="xsl_tag"></table>-->
+        <!--<table schema="" tableName="xsl_task"></table>-->
+        <!--<table schema="" tableName="xsl_task_category"></table>-->
+        <!--<table schema="" tableName="xsl_task_tag"></table>-->
+        <!--<table schema="" tableName="xsl_throwinglog"></table>-->
+        <!--<table schema="" tableName="xsl_token"></table>-->
+        <!--<table schema="" tableName="xsl_user"></table>-->
+        <!--<table schema="" tableName="xsl_user_file"></table>-->
+
+        <!--<table schema="" tableName="xsl_task_tag"></table>-->
+        <!--<table schema="" tableName="xsl_tag"></table>-->
+        <!--<table schema="" tableName="xsl_hunter_tag"></table>-->
+        <!--<table schema="" tableName="xsl_match_personal_honor"></table>-->
+        <!--<table schema="" tableName="xsl_match_reward"></table>-->
+        <!--<table schema="" tableName="xsl_match_team"></table>-->
+        <!--<table schema="" tableName="xsl_match_type"></table>-->
+        <!--<table schema="" tableName="xsl_match_user"></table>-->
+        <!--<table schema="" tableName="xsl_oriented"></table>-->
+        <!--<table schema="" tableName="xsl_position_application"></table>-->
+        <!--<table schema="" tableName="xsl_reward"></table>-->
+        <!--<table schema="" tableName="xsl_reward_rank"></table>-->
+        <!--<table schema="" tableName="xsl_team_member"></table>-->
+        <!--<table schema="" tableName="xsl_team_position"></table>-->
+        <!--<table schema="" tableName="xsl_user"></table>-->
+        <!--<table schema="" tableName="xsl_user"></table>-->
+    </context>
+</generatorConfiguration>
